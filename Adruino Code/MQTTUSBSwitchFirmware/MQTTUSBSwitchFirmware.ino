@@ -30,7 +30,7 @@
 #define debugln(x)
 #endif
 
-const char    fmversion[]     = "v1.2";                         // firmware version
+const char    fmversion[]     = "v1.3";                         // firmware version
 const char    mqtt_server[]   = "xxxxxxxxxx.xxx";               // server name for mqtt
 const char    mqtt_username[] = "xxxxxxxxxxxxxxxxx";            // username for MQTT broker (USE ONE)
 const char    mqtt_password[] = "xxxxxxxxxxxxxx";               // password for MQTT broker
@@ -267,9 +267,9 @@ void connectUSB() {
 // **************************************************************************
 void disconnectUSB() {
   // first we must remove the data lines
-  digitalWrite(powerDisconnectPin, HIGH);
+  digitalWrite(dataConnectPin, HIGH);
   delay(80);
-  digitalWrite(powerDisconnectPin, LOW);
+  digitalWrite(dataConnectPin, LOW);
 
   // now that the data lines are disconnected, we wait a fraction of a second
   delay(80);
