@@ -30,7 +30,7 @@
 #define debugln(x)
 #endif
 
-const char    fmversion[]     = "v1.3";                         // firmware version
+const char    fmversion[]     = "v1.4";                         // firmware version
 const char    mqtt_server[]   = "xxxxxxxxxx.xxx";               // server name for mqtt
 const char    mqtt_username[] = "xxxxxxxxxxxxxxxxx";            // username for MQTT broker (USE ONE)
 const char    mqtt_password[] = "xxxxxxxxxxxxxx";               // password for MQTT broker
@@ -39,6 +39,7 @@ const String  mqtt_out_topic  = "mqttUSBSwitch/stats";          // the full topi
 const String  mqtt_in_topic   = "mqttUSBSwitch/cmd/switch";     // the full topic for the subscription
 const String  fwVersionTopic  = mqtt_out_topic + "/firmware";
 const String  swStatusTopic   = mqtt_out_topic + "/switch";
+const String  actionTopic     = mqtt_out_topic + "/triggerdby";
 
 // Connect/Disconnect pins are incorrect in schematic based on the NO/CL position of the relays, adjusting in the firmware
 #define powerConnectPin        12 //GPIO12
@@ -49,6 +50,9 @@ const String  swStatusTopic   = mqtt_out_topic + "/switch";
 
 // keep track of our switch status (defaults on boot to off, and we make sure the switch is turned off)
 String switchStatus = "off";
+
+// keep track of what caused us to take action, either MQTT message, manual button push, or device reset
+String lastActionBy = "device_reset";
 
 // init our WiFi client object
 WiFiClient espWiFiClient;
@@ -110,6 +114,8 @@ void setup() {
   digitalWrite(dataConnectPin, LOW);
   digitalWrite(dataDisconnectPin, LOW);
 
+  // start off in a disconnected state and update mqtt server
+  disconnectUSB();
 }
 
 // ************************************************************************************************
@@ -130,6 +136,7 @@ void loop() {
     if (digitalRead(manualSwitchButtonPin) == LOW) {
       // switch the relays as the user requested
       debugln("Switching...");
+      lastActionBy = "manual_button";
       if (switchStatus.equalsIgnoreCase("on")) {
         debugln("we are on, switching off...");
         // turn off the switch
@@ -177,10 +184,14 @@ void mqttSubscriptionMessage(char* topic, byte* payload, unsigned int length) {
 
   // Switch on the LED if an 1 was received as first character
   if (payloadString.equalsIgnoreCase("on")) {
+    // update our value for the last action by topic
+    lastActionBy = "mqtt_message";
     // switch the usb lines to connect everything
     connectUSB();
   }
   else if (payloadString.equalsIgnoreCase("off")) {
+    // update our value for the last action by topic
+    lastActionBy = "mqtt_message";
     // switch the usb lines to disconnect everything
     disconnectUSB();
   }
@@ -195,6 +206,7 @@ void mqttSubscriptionMessage(char* topic, byte* payload, unsigned int length) {
 void publishMQTTData() {
   client.publish(fwVersionTopic.c_str(), fmversion);
   client.publish(swStatusTopic.c_str(), switchStatus.c_str());
+  client.publish(actionTopic.c_str(), lastActionBy.c_str());
 }
 
 // **************************************************************************
