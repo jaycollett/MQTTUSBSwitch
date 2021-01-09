@@ -16,6 +16,7 @@ script:
   - "echo $PWD"
   - "echo $HOME"
   - "ls $PWD"
+  - "ls $PWD\Arduino\ Code\"
   - pio lib install https://github.com/jaycollett/MQTTUSBSwitch.git
   - pio lib install "PubSubClient"
   - pio lib install "DNSServer"
