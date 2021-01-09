@@ -18,7 +18,6 @@ script:
   - "ls $PWD"
   - pio lib install https://github.com/jaycollett/MQTTUSBSwitch.git
   - pio lib install "PubSubClient"
-  - pio lib install "ESP8266WiFi"
   - pio lib install "DNSServer"
   - pio lib install "ESP8266WebServer"
   - pio lib install "WiFiManager"
