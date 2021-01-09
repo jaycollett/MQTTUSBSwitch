@@ -21,7 +21,7 @@ script:
   - pio lib install "PubSubClient"
   - pio lib install "DNSServer"
   - pio lib install "WiFiManager"
-  - platformio ci --board=$BOARD --lib=$PWD/Arduino\ Code $PWD/Arduino\ Code/MQTTUSBSwitchFirmware.ino
+  - platformio ci --board=$BOARD --lib=$PWD/ArduinoCode $PWD/ArduinoCode/MQTTUSBSwitchFirmware/MQTTUSBSwitchFirmware.ino
   
 notifications:
   email:
