@@ -40,10 +40,11 @@ const String  mqtt_in_topic   = "mqttUSBSwitch/cmd/switch";     // the full topi
 const String  fwVersionTopic  = mqtt_out_topic + "/firmware";
 const String  swStatusTopic   = mqtt_out_topic + "/switch";
 
-#define powerConnectPin        5  //GPIO5
-#define powerDisconnectPin     12 //GPIO12
-#define dataConnectPin         4  //GPIO4
-#define dataDisconnectPin      13 //GPIO13
+// Connect/Disconnect pins are incorrect in schematic based on the NO/CL position of the relays, adjusting in the firmware
+#define powerConnectPin        12 //GPIO12
+#define powerDisconnectPin     5  //GPIO4
+#define dataConnectPin         13 //GPIO13
+#define dataDisconnectPin      4  //GPIO4
 #define manualSwitchButtonPin  14 //GPIO14
 
 // keep track of our switch status (defaults on boot to off, and we make sure the switch is turned off)
