@@ -6,3 +6,5 @@ MQTT Enabled USB Switch to remotely connect/disconnect USB devices. This firmwar
 
 # Board 
 ![](EagleCad/board.png?raw=true)
+
+[![Travis](https://img.shields.io/travis/com/jaycollett/MQTTUSBSwitch?style=for-the-badge)](https://travis-ci.com/github/jaycollett) [![license](https://img.shields.io/github/license/jaycollett/MQTTUSBSwitch.svg?style=for-the-badge)](https://travis-ci.com/github/jaycollett/blob/master/LICENSE)
