@@ -10052,7 +10052,6 @@ Source: &lt;a href="https://content.kemet.com/datasheets/KEM_R7002_EC2_EE2.pdf"&
 <part name="GND6" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
 <part name="H1" library="holes" library_urn="urn:adsk.eagle:library:237" deviceset="MOUNT-HOLE" device="3.0" package3d_urn="urn:adsk.eagle:package:14277/1"/>
 <part name="H2" library="holes" library_urn="urn:adsk.eagle:library:237" deviceset="MOUNT-HOLE" device="3.0" package3d_urn="urn:adsk.eagle:package:14277/1"/>
-<part name="H3" library="holes" library_urn="urn:adsk.eagle:library:237" deviceset="MOUNT-HOLE" device="3.0" package3d_urn="urn:adsk.eagle:package:14277/1"/>
 <part name="H4" library="holes" library_urn="urn:adsk.eagle:library:237" deviceset="MOUNT-HOLE" device="3.0" package3d_urn="urn:adsk.eagle:package:14277/1"/>
 <part name="R9" library="adafruit" library_urn="urn:adsk.eagle:library:420" deviceset="R-US_" device="R0805" package3d_urn="urn:adsk.eagle:package:6240566/1" value="10k"/>
 <part name="R10" library="adafruit" library_urn="urn:adsk.eagle:library:420" deviceset="R-US_" device="R0805" package3d_urn="urn:adsk.eagle:package:6240566/1" value="10k"/>
@@ -10068,7 +10067,6 @@ Source: &lt;a href="https://content.kemet.com/datasheets/KEM_R7002_EC2_EE2.pdf"&
 <part name="R14" library="adafruit" library_urn="urn:adsk.eagle:library:420" deviceset="R-US_" device="R0805" package3d_urn="urn:adsk.eagle:package:6240566/1" value="150Ohm"/>
 <part name="J5" library="SparkFun-Connectors" library_urn="urn:adsk.eagle:library:513" deviceset="CONN_02" device="" package3d_urn="urn:adsk.eagle:package:38039/1"/>
 <part name="IC1" library="uln-udn" library_urn="urn:adsk.eagle:library:407" deviceset="ULN2804A" device="" package3d_urn="urn:adsk.eagle:package:16424/2" value="ULN2803A"/>
-<part name="IC2" library="adafruit" library_urn="urn:adsk.eagle:library:420" deviceset="MCP23008" device="/P" package3d_urn="urn:adsk.eagle:package:6240756/1"/>
 <part name="K1" library="SamacSys_Parts" deviceset="EC2-3TNU" device=""/>
 <part name="K2" library="SamacSys_Parts" deviceset="EC2-3TNU" device=""/>
 <part name="K3" library="SamacSys_Parts" deviceset="EC2-3TNU" device=""/>
@@ -10076,6 +10074,12 @@ Source: &lt;a href="https://content.kemet.com/datasheets/KEM_R7002_EC2_EE2.pdf"&
 <part name="GND1" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
 <part name="R1" library="adafruit" library_urn="urn:adsk.eagle:library:420" deviceset="R-US_" device="R0805" package3d_urn="urn:adsk.eagle:package:6240566/1" value="4.7k"/>
 <part name="R2" library="adafruit" library_urn="urn:adsk.eagle:library:420" deviceset="R-US_" device="R0805" package3d_urn="urn:adsk.eagle:package:6240566/1" value="4.7k"/>
+<part name="R3" library="adafruit" library_urn="urn:adsk.eagle:library:420" deviceset="R-US_" device="R0805" package3d_urn="urn:adsk.eagle:package:6240566/1" value="10k"/>
+<part name="IC2" library="adafruit" library_urn="urn:adsk.eagle:library:420" deviceset="MCP23008" device="/P" package3d_urn="urn:adsk.eagle:package:6240756/1"/>
+<part name="H3" library="holes" library_urn="urn:adsk.eagle:library:237" deviceset="MOUNT-HOLE" device="3.0" package3d_urn="urn:adsk.eagle:package:14277/1"/>
+<part name="C4" library="adafruit" library_urn="urn:adsk.eagle:library:420" deviceset="C-US" device="C0805" package3d_urn="urn:adsk.eagle:package:6240337/1"/>
+<part name="GND2" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
+<part name="C5" library="adafruit" library_urn="urn:adsk.eagle:library:420" deviceset="C-US" device="C0805" package3d_urn="urn:adsk.eagle:package:6240337/1"/>
 </parts>
 <sheets>
 <sheet>
@@ -10133,9 +10137,6 @@ Source: &lt;a href="https://content.kemet.com/datasheets/KEM_R7002_EC2_EE2.pdf"&
 <instance part="H2" gate="G$1" x="142.24" y="7.62" smashed="yes">
 <attribute name="NAME" x="144.272" y="8.2042" size="1.778" layer="95"/>
 </instance>
-<instance part="H3" gate="G$1" x="134.62" y="2.54" smashed="yes">
-<attribute name="NAME" x="136.652" y="3.1242" size="1.778" layer="95"/>
-</instance>
 <instance part="H4" gate="G$1" x="142.24" y="2.54" smashed="yes">
 <attribute name="NAME" x="144.272" y="3.1242" size="1.778" layer="95"/>
 </instance>
@@ -10162,9 +10163,9 @@ Source: &lt;a href="https://content.kemet.com/datasheets/KEM_R7002_EC2_EE2.pdf"&
 <attribute name="VALUE" x="215.9" y="38.354" size="1.778" layer="96" font="vector"/>
 <attribute name="NAME" x="215.9" y="56.388" size="1.778" layer="95" font="vector"/>
 </instance>
-<instance part="J4" gate="G$1" x="180.34" y="43.18" smashed="yes">
-<attribute name="VALUE" x="177.8" y="38.354" size="1.778" layer="96" font="vector"/>
-<attribute name="NAME" x="177.8" y="48.768" size="1.778" layer="95" font="vector"/>
+<instance part="J4" gate="G$1" x="218.44" y="66.04" smashed="yes">
+<attribute name="VALUE" x="215.9" y="61.214" size="1.778" layer="96" font="vector"/>
+<attribute name="NAME" x="215.9" y="71.628" size="1.778" layer="95" font="vector"/>
 </instance>
 <instance part="S2" gate="G$1" x="55.88" y="180.34" smashed="yes" rot="R180">
 <attribute name="NAME" x="55.88" y="178.816" size="1.778" layer="95" font="vector" rot="R180" align="bottom-center"/>
@@ -10177,20 +10178,17 @@ Source: &lt;a href="https://content.kemet.com/datasheets/KEM_R7002_EC2_EE2.pdf"&
 <attribute name="NAME" x="79.7814" y="125.73" size="1.778" layer="95" rot="R90"/>
 <attribute name="VALUE" x="84.582" y="125.73" size="1.778" layer="96" rot="R90"/>
 </instance>
-<instance part="R14" gate="G$1" x="198.12" y="119.38" smashed="yes" rot="R180">
-<attribute name="NAME" x="201.93" y="117.8814" size="1.778" layer="95" rot="R180"/>
-<attribute name="VALUE" x="201.93" y="122.682" size="1.778" layer="96" rot="R180"/>
+<instance part="R14" gate="G$1" x="55.88" y="170.18" smashed="yes" rot="R180">
+<attribute name="NAME" x="59.69" y="168.6814" size="1.778" layer="95" rot="R180"/>
+<attribute name="VALUE" x="59.69" y="173.482" size="1.778" layer="96" rot="R180"/>
 </instance>
-<instance part="J5" gate="G$1" x="226.06" y="119.38" smashed="yes" rot="R180">
-<attribute name="VALUE" x="228.6" y="124.206" size="1.778" layer="96" font="vector" rot="R180"/>
-<attribute name="NAME" x="228.6" y="113.792" size="1.778" layer="95" font="vector" rot="R180"/>
+<instance part="J5" gate="G$1" x="83.82" y="170.18" smashed="yes" rot="R180">
+<attribute name="VALUE" x="86.36" y="175.006" size="1.778" layer="96" font="vector" rot="R180"/>
+<attribute name="NAME" x="86.36" y="164.592" size="1.778" layer="95" font="vector" rot="R180"/>
 </instance>
-<instance part="IC1" gate="G$1" x="170.18" y="83.82" smashed="yes">
-<attribute name="NAME" x="162.56" y="97.282" size="1.778" layer="95"/>
-<attribute name="VALUE" x="162.56" y="68.58" size="1.778" layer="96"/>
-</instance>
-<instance part="IC2" gate="G$1" x="137.16" y="83.82" smashed="yes">
-<attribute name="NAME" x="139.7" y="63.5" size="1.27" layer="95"/>
+<instance part="IC1" gate="G$1" x="177.8" y="96.52" smashed="yes" rot="R90">
+<attribute name="NAME" x="164.338" y="88.9" size="1.778" layer="95" rot="R90"/>
+<attribute name="VALUE" x="193.04" y="88.9" size="1.778" layer="96" rot="R90"/>
 </instance>
 <instance part="K1" gate="G$1" x="30.48" y="86.36" smashed="yes">
 <attribute name="NAME" x="64.77" y="93.98" size="1.778" layer="95" align="center-left"/>
@@ -10208,16 +10206,37 @@ Source: &lt;a href="https://content.kemet.com/datasheets/KEM_R7002_EC2_EE2.pdf"&
 <attribute name="NAME" x="64.77" y="25.4" size="1.778" layer="95" align="center-left"/>
 <attribute name="VALUE" x="64.77" y="22.86" size="1.778" layer="96" align="center-left"/>
 </instance>
-<instance part="GND1" gate="1" x="137.16" y="53.34" smashed="yes">
-<attribute name="VALUE" x="134.62" y="50.8" size="1.778" layer="96"/>
+<instance part="GND1" gate="1" x="142.24" y="35.56" smashed="yes">
+<attribute name="VALUE" x="139.7" y="33.02" size="1.778" layer="96"/>
 </instance>
-<instance part="R1" gate="G$1" x="114.3" y="93.98" smashed="yes" rot="R90">
-<attribute name="NAME" x="112.8014" y="90.17" size="1.778" layer="95" rot="R90"/>
-<attribute name="VALUE" x="117.602" y="90.17" size="1.778" layer="96" rot="R90"/>
+<instance part="R1" gate="G$1" x="119.38" y="76.2" smashed="yes" rot="R90">
+<attribute name="NAME" x="117.8814" y="72.39" size="1.778" layer="95" rot="R90"/>
+<attribute name="VALUE" x="122.682" y="72.39" size="1.778" layer="96" rot="R90"/>
 </instance>
-<instance part="R2" gate="G$1" x="104.14" y="91.44" smashed="yes" rot="R90">
-<attribute name="NAME" x="102.6414" y="87.63" size="1.778" layer="95" rot="R90"/>
-<attribute name="VALUE" x="107.442" y="87.63" size="1.778" layer="96" rot="R90"/>
+<instance part="R2" gate="G$1" x="109.22" y="73.66" smashed="yes" rot="R90">
+<attribute name="NAME" x="107.7214" y="69.85" size="1.778" layer="95" rot="R90"/>
+<attribute name="VALUE" x="112.522" y="69.85" size="1.778" layer="96" rot="R90"/>
+</instance>
+<instance part="R3" gate="G$1" x="124.46" y="83.82" smashed="yes" rot="R90">
+<attribute name="NAME" x="122.9614" y="80.01" size="1.778" layer="95" rot="R90"/>
+<attribute name="VALUE" x="127.762" y="80.01" size="1.778" layer="96" rot="R90"/>
+</instance>
+<instance part="IC2" gate="G$1" x="142.24" y="66.04" smashed="yes">
+<attribute name="NAME" x="144.78" y="45.72" size="1.27" layer="95"/>
+</instance>
+<instance part="H3" gate="G$1" x="134.62" y="2.54" smashed="yes">
+<attribute name="NAME" x="136.652" y="3.1242" size="1.778" layer="95"/>
+</instance>
+<instance part="C4" gate="G$1" x="149.86" y="88.9" smashed="yes" rot="R90">
+<attribute name="NAME" x="149.225" y="89.916" size="1.778" layer="95" rot="R90"/>
+<attribute name="VALUE" x="154.051" y="89.916" size="1.778" layer="96" rot="R90"/>
+</instance>
+<instance part="GND2" gate="1" x="157.48" y="88.9" smashed="yes" rot="R90">
+<attribute name="VALUE" x="160.02" y="86.36" size="1.778" layer="96" rot="R90"/>
+</instance>
+<instance part="C5" gate="G$1" x="241.3" y="160.02" smashed="yes">
+<attribute name="NAME" x="242.316" y="160.655" size="1.778" layer="95"/>
+<attribute name="VALUE" x="242.316" y="155.829" size="1.778" layer="96"/>
 </instance>
 </instances>
 <busses>
@@ -10230,9 +10249,9 @@ Source: &lt;a href="https://content.kemet.com/datasheets/KEM_R7002_EC2_EE2.pdf"&
 <label x="45.72" y="116.84" size="1.778" layer="95"/>
 </segment>
 <segment>
-<pinref part="K2" gate="G$1" pin="COM_2"/>
-<wire x1="88.9" y1="58.42" x2="68.58" y2="58.42" width="0.1524" layer="91"/>
-<label x="71.12" y="58.42" size="1.778" layer="95"/>
+<pinref part="K2" gate="G$1" pin="NC_2"/>
+<wire x1="88.9" y1="60.96" x2="68.58" y2="60.96" width="0.1524" layer="91"/>
+<label x="71.12" y="60.96" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="D+" class="0">
@@ -10242,9 +10261,9 @@ Source: &lt;a href="https://content.kemet.com/datasheets/KEM_R7002_EC2_EE2.pdf"&
 <label x="45.72" y="121.92" size="1.778" layer="95"/>
 </segment>
 <segment>
-<pinref part="K2" gate="G$1" pin="COM_1"/>
-<wire x1="30.48" y1="58.42" x2="12.7" y2="58.42" width="0.1524" layer="91"/>
-<label x="12.7" y="58.42" size="1.778" layer="95"/>
+<pinref part="K2" gate="G$1" pin="NC_1"/>
+<wire x1="30.48" y1="60.96" x2="12.7" y2="60.96" width="0.1524" layer="91"/>
+<label x="12.7" y="60.96" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="GND" class="0">
@@ -10266,6 +10285,9 @@ Source: &lt;a href="https://content.kemet.com/datasheets/KEM_R7002_EC2_EE2.pdf"&
 <wire x1="223.52" y1="165.1" x2="223.52" y2="144.78" width="0.1524" layer="91"/>
 <wire x1="223.52" y1="144.78" x2="233.68" y2="144.78" width="0.1524" layer="91"/>
 <junction x="233.68" y="144.78"/>
+<wire x1="233.68" y1="144.78" x2="241.3" y2="144.78" width="0.1524" layer="91"/>
+<pinref part="C5" gate="G$1" pin="2"/>
+<wire x1="241.3" y1="144.78" x2="241.3" y2="154.94" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <pinref part="GND5" gate="1" pin="GND"/>
@@ -10305,32 +10327,36 @@ Source: &lt;a href="https://content.kemet.com/datasheets/KEM_R7002_EC2_EE2.pdf"&
 </segment>
 <segment>
 <pinref part="J5" gate="G$1" pin="2"/>
-<wire x1="218.44" y1="116.84" x2="218.44" y2="114.3" width="0.1524" layer="91"/>
-<wire x1="218.44" y1="114.3" x2="200.66" y2="114.3" width="0.1524" layer="91"/>
-<label x="208.28" y="114.3" size="1.778" layer="95"/>
+<wire x1="76.2" y1="167.64" x2="76.2" y2="165.1" width="0.1524" layer="91"/>
+<wire x1="76.2" y1="165.1" x2="58.42" y2="165.1" width="0.1524" layer="91"/>
+<label x="66.04" y="165.1" size="1.778" layer="95"/>
 </segment>
 <segment>
-<pinref part="IC2" gate="G$1" pin="GND"/>
-<wire x1="137.16" y1="60.96" x2="137.16" y2="55.88" width="0.1524" layer="91"/>
+<wire x1="142.24" y1="43.18" x2="142.24" y2="38.1" width="0.1524" layer="91"/>
 <pinref part="GND1" gate="1" pin="GND"/>
+<wire x1="127" y1="58.42" x2="127" y2="55.88" width="0.1524" layer="91"/>
+<wire x1="127" y1="55.88" x2="127" y2="53.34" width="0.1524" layer="91"/>
+<wire x1="127" y1="53.34" x2="127" y2="43.18" width="0.1524" layer="91"/>
+<wire x1="127" y1="43.18" x2="142.24" y2="43.18" width="0.1524" layer="91"/>
+<junction x="142.24" y="43.18"/>
+<pinref part="IC1" gate="G$1" pin="GND"/>
+<wire x1="142.24" y1="43.18" x2="187.96" y2="43.18" width="0.1524" layer="91"/>
+<wire x1="187.96" y1="43.18" x2="187.96" y2="83.82" width="0.1524" layer="91"/>
+<pinref part="IC2" gate="G$1" pin="GND"/>
 <pinref part="IC2" gate="G$1" pin="A0"/>
 <pinref part="IC2" gate="G$1" pin="A1"/>
-<wire x1="121.92" y1="76.2" x2="121.92" y2="73.66" width="0.1524" layer="91"/>
+<junction x="127" y="55.88"/>
 <pinref part="IC2" gate="G$1" pin="A2"/>
-<wire x1="121.92" y1="73.66" x2="121.92" y2="71.12" width="0.1524" layer="91"/>
-<junction x="121.92" y="73.66"/>
-<wire x1="121.92" y1="71.12" x2="121.92" y2="60.96" width="0.1524" layer="91"/>
-<wire x1="121.92" y1="60.96" x2="137.16" y2="60.96" width="0.1524" layer="91"/>
-<junction x="121.92" y="71.12"/>
-<junction x="137.16" y="60.96"/>
-<pinref part="IC1" gate="G$1" pin="GND"/>
-<wire x1="157.48" y1="73.66" x2="157.48" y2="60.96" width="0.1524" layer="91"/>
-<wire x1="157.48" y1="60.96" x2="137.16" y2="60.96" width="0.1524" layer="91"/>
+<junction x="127" y="53.34"/>
 </segment>
 <segment>
 <pinref part="K1" gate="G$1" pin="NC_2"/>
 <wire x1="68.58" y1="83.82" x2="88.9" y2="83.82" width="0.1524" layer="91"/>
 <label x="71.12" y="83.82" size="1.778" layer="95"/>
+</segment>
+<segment>
+<pinref part="C4" gate="G$1" pin="2"/>
+<pinref part="GND2" gate="1" pin="GND"/>
 </segment>
 </net>
 <net name="USB_5V_IN" class="2">
@@ -10387,8 +10413,8 @@ Source: &lt;a href="https://content.kemet.com/datasheets/KEM_R7002_EC2_EE2.pdf"&
 </segment>
 <segment>
 <pinref part="J4" gate="G$1" pin="1"/>
-<wire x1="205.74" y1="43.18" x2="187.96" y2="43.18" width="0.1524" layer="91"/>
-<label x="190.5" y="43.18" size="1.778" layer="95"/>
+<wire x1="243.84" y1="66.04" x2="226.06" y2="66.04" width="0.1524" layer="91"/>
+<label x="228.6" y="66.04" size="1.778" layer="95"/>
 </segment>
 <segment>
 <pinref part="R13" gate="G$1" pin="2"/>
@@ -10396,18 +10422,20 @@ Source: &lt;a href="https://content.kemet.com/datasheets/KEM_R7002_EC2_EE2.pdf"&
 <label x="81.28" y="137.16" size="1.778" layer="95" rot="R90"/>
 </segment>
 <segment>
+<wire x1="142.24" y1="86.36" x2="142.24" y2="88.9" width="0.1524" layer="91"/>
+<label x="142.24" y="91.44" size="1.778" layer="95" rot="R90"/>
+<pinref part="R3" gate="G$1" pin="2"/>
+<wire x1="142.24" y1="88.9" x2="142.24" y2="99.06" width="0.1524" layer="91"/>
+<wire x1="124.46" y1="88.9" x2="142.24" y2="88.9" width="0.1524" layer="91"/>
+<junction x="142.24" y="88.9"/>
 <pinref part="IC2" gate="G$1" pin="VCC"/>
-<wire x1="137.16" y1="104.14" x2="137.16" y2="114.3" width="0.1524" layer="91"/>
-<label x="137.16" y="109.22" size="1.778" layer="95" rot="R90"/>
-<pinref part="IC2" gate="G$1" pin="/RST"/>
-<wire x1="137.16" y1="104.14" x2="121.92" y2="104.14" width="0.1524" layer="91"/>
-<wire x1="121.92" y1="104.14" x2="121.92" y2="93.98" width="0.1524" layer="91"/>
-<junction x="137.16" y="104.14"/>
+<pinref part="C4" gate="G$1" pin="1"/>
+<wire x1="147.32" y1="88.9" x2="142.24" y2="88.9" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <pinref part="IC1" gate="G$1" pin="CD+"/>
-<wire x1="182.88" y1="73.66" x2="195.58" y2="73.66" width="0.1524" layer="91"/>
-<label x="190.5" y="73.66" size="1.778" layer="95"/>
+<wire x1="187.96" y1="109.22" x2="187.96" y2="121.92" width="0.1524" layer="91"/>
+<label x="187.96" y="116.84" size="1.778" layer="95" rot="R90"/>
 </segment>
 <segment>
 <pinref part="K1" gate="G$1" pin="COIL_+_1"/>
@@ -10451,30 +10479,30 @@ Source: &lt;a href="https://content.kemet.com/datasheets/KEM_R7002_EC2_EE2.pdf"&
 </segment>
 <segment>
 <pinref part="R2" gate="G$1" pin="2"/>
-<wire x1="104.14" y1="96.52" x2="104.14" y2="101.6" width="0.1524" layer="91"/>
-<wire x1="104.14" y1="101.6" x2="109.22" y2="101.6" width="0.1524" layer="91"/>
+<wire x1="109.22" y1="78.74" x2="109.22" y2="83.82" width="0.1524" layer="91"/>
+<wire x1="109.22" y1="83.82" x2="114.3" y2="83.82" width="0.1524" layer="91"/>
 <pinref part="R1" gate="G$1" pin="2"/>
-<wire x1="109.22" y1="101.6" x2="114.3" y2="101.6" width="0.1524" layer="91"/>
-<wire x1="114.3" y1="101.6" x2="114.3" y2="99.06" width="0.1524" layer="91"/>
-<wire x1="109.22" y1="101.6" x2="109.22" y2="109.22" width="0.1524" layer="91"/>
-<junction x="109.22" y="101.6"/>
-<label x="109.22" y="104.14" size="1.778" layer="95" rot="R90"/>
+<wire x1="114.3" y1="83.82" x2="119.38" y2="83.82" width="0.1524" layer="91"/>
+<wire x1="119.38" y1="83.82" x2="119.38" y2="81.28" width="0.1524" layer="91"/>
+<wire x1="114.3" y1="83.82" x2="114.3" y2="91.44" width="0.1524" layer="91"/>
+<junction x="114.3" y="83.82"/>
+<label x="114.3" y="86.36" size="1.778" layer="95" rot="R90"/>
 </segment>
 </net>
 <net name="SDA" class="0">
 <segment>
 <pinref part="X1" gate="G$1" pin="GPIO5"/>
 <wire x1="154.94" y1="160.02" x2="172.72" y2="160.02" width="0.1524" layer="91"/>
-<label x="157.48" y="160.02" size="1.778" layer="95"/>
+<label x="170.18" y="160.02" size="1.778" layer="95"/>
 </segment>
 <segment>
-<pinref part="IC2" gate="G$1" pin="SDA"/>
-<wire x1="121.92" y1="83.82" x2="114.3" y2="83.82" width="0.1524" layer="91"/>
-<label x="109.22" y="83.82" size="1.778" layer="95"/>
+<wire x1="127" y1="66.04" x2="119.38" y2="66.04" width="0.1524" layer="91"/>
+<label x="114.3" y="66.04" size="1.778" layer="95"/>
 <pinref part="R1" gate="G$1" pin="1"/>
-<wire x1="114.3" y1="83.82" x2="109.22" y2="83.82" width="0.1524" layer="91"/>
-<wire x1="114.3" y1="88.9" x2="114.3" y2="83.82" width="0.1524" layer="91"/>
-<junction x="114.3" y="83.82"/>
+<wire x1="119.38" y1="66.04" x2="114.3" y2="66.04" width="0.1524" layer="91"/>
+<wire x1="119.38" y1="71.12" x2="119.38" y2="66.04" width="0.1524" layer="91"/>
+<junction x="119.38" y="66.04"/>
+<pinref part="IC2" gate="G$1" pin="SDA"/>
 </segment>
 </net>
 <net name="USB_5V_OUT" class="2">
@@ -10485,8 +10513,8 @@ Source: &lt;a href="https://content.kemet.com/datasheets/KEM_R7002_EC2_EE2.pdf"&
 </segment>
 <segment>
 <pinref part="R14" gate="G$1" pin="2"/>
-<wire x1="193.04" y1="119.38" x2="180.34" y2="119.38" width="0.1524" layer="91"/>
-<label x="175.26" y="119.38" size="1.778" layer="95"/>
+<wire x1="50.8" y1="170.18" x2="38.1" y2="170.18" width="0.1524" layer="91"/>
+<label x="33.02" y="170.18" size="1.778" layer="95"/>
 </segment>
 <segment>
 <pinref part="K1" gate="G$1" pin="COM_1"/>
@@ -10498,16 +10526,16 @@ Source: &lt;a href="https://content.kemet.com/datasheets/KEM_R7002_EC2_EE2.pdf"&
 <segment>
 <pinref part="X1" gate="G$1" pin="GPIO4"/>
 <wire x1="154.94" y1="162.56" x2="172.72" y2="162.56" width="0.1524" layer="91"/>
-<label x="157.48" y="162.56" size="1.778" layer="95"/>
+<label x="170.18" y="162.56" size="1.778" layer="95"/>
 </segment>
 <segment>
-<pinref part="IC2" gate="G$1" pin="SCL"/>
-<wire x1="121.92" y1="81.28" x2="104.14" y2="81.28" width="0.1524" layer="91"/>
-<label x="99.06" y="81.28" size="1.778" layer="95"/>
+<wire x1="127" y1="63.5" x2="109.22" y2="63.5" width="0.1524" layer="91"/>
+<label x="104.14" y="63.5" size="1.778" layer="95"/>
 <pinref part="R2" gate="G$1" pin="1"/>
-<wire x1="104.14" y1="81.28" x2="99.06" y2="81.28" width="0.1524" layer="91"/>
-<wire x1="104.14" y1="86.36" x2="104.14" y2="81.28" width="0.1524" layer="91"/>
-<junction x="104.14" y="81.28"/>
+<wire x1="109.22" y1="63.5" x2="104.14" y2="63.5" width="0.1524" layer="91"/>
+<wire x1="109.22" y1="68.58" x2="109.22" y2="63.5" width="0.1524" layer="91"/>
+<junction x="109.22" y="63.5"/>
+<pinref part="IC2" gate="G$1" pin="SCL"/>
 </segment>
 </net>
 <net name="GND_USB_OUT" class="2">
@@ -10534,9 +10562,9 @@ Source: &lt;a href="https://content.kemet.com/datasheets/KEM_R7002_EC2_EE2.pdf"&
 <label x="40.64" y="144.78" size="1.778" layer="95"/>
 </segment>
 <segment>
-<pinref part="K2" gate="G$1" pin="NC_1"/>
-<wire x1="30.48" y1="60.96" x2="12.7" y2="60.96" width="0.1524" layer="91"/>
-<label x="12.7" y="60.96" size="1.778" layer="95"/>
+<pinref part="K2" gate="G$1" pin="COM_1"/>
+<wire x1="30.48" y1="58.42" x2="12.7" y2="58.42" width="0.1524" layer="91"/>
+<label x="12.7" y="58.42" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="D-_OUT" class="0">
@@ -10546,9 +10574,9 @@ Source: &lt;a href="https://content.kemet.com/datasheets/KEM_R7002_EC2_EE2.pdf"&
 <label x="40.64" y="142.24" size="1.778" layer="95"/>
 </segment>
 <segment>
-<pinref part="K2" gate="G$1" pin="NC_2"/>
-<wire x1="88.9" y1="60.96" x2="68.58" y2="60.96" width="0.1524" layer="91"/>
-<label x="71.12" y="60.96" size="1.778" layer="95"/>
+<pinref part="K2" gate="G$1" pin="COM_2"/>
+<wire x1="88.9" y1="58.42" x2="68.58" y2="58.42" width="0.1524" layer="91"/>
+<label x="71.12" y="58.42" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="TX" class="0">
@@ -10644,14 +10672,18 @@ Source: &lt;a href="https://content.kemet.com/datasheets/KEM_R7002_EC2_EE2.pdf"&
 <wire x1="223.52" y1="172.72" x2="233.68" y2="172.72" width="0.1524" layer="91"/>
 <label x="226.314" y="173.482" size="1.778" layer="95"/>
 <pinref part="C1" gate="G$1" pin="1"/>
-<wire x1="233.68" y1="172.72" x2="238.76" y2="172.72" width="0.1524" layer="91"/>
+<wire x1="233.68" y1="172.72" x2="241.3" y2="172.72" width="0.1524" layer="91"/>
 <wire x1="233.68" y1="162.56" x2="233.68" y2="172.72" width="0.1524" layer="91"/>
 <junction x="233.68" y="172.72"/>
+<pinref part="C5" gate="G$1" pin="1"/>
+<wire x1="241.3" y1="162.56" x2="241.3" y2="172.72" width="0.1524" layer="91"/>
+<wire x1="241.3" y1="172.72" x2="246.38" y2="172.72" width="0.1524" layer="91"/>
+<junction x="241.3" y="172.72"/>
 </segment>
 <segment>
 <pinref part="J4" gate="G$1" pin="2"/>
-<wire x1="205.74" y1="45.72" x2="187.96" y2="45.72" width="0.1524" layer="91"/>
-<label x="190.5" y="45.72" size="1.778" layer="95"/>
+<wire x1="243.84" y1="68.58" x2="226.06" y2="68.58" width="0.1524" layer="91"/>
+<label x="228.6" y="68.58" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="MAN_SWITCH" class="0">
@@ -10673,63 +10705,7 @@ Source: &lt;a href="https://content.kemet.com/datasheets/KEM_R7002_EC2_EE2.pdf"&
 <segment>
 <pinref part="J5" gate="G$1" pin="1"/>
 <pinref part="R14" gate="G$1" pin="1"/>
-<wire x1="218.44" y1="119.38" x2="203.2" y2="119.38" width="0.1524" layer="91"/>
-</segment>
-</net>
-<net name="N$2" class="0">
-<segment>
-<pinref part="IC2" gate="G$1" pin="GP0"/>
-<pinref part="IC1" gate="G$1" pin="I1"/>
-<wire x1="152.4" y1="93.98" x2="157.48" y2="93.98" width="0.1524" layer="91"/>
-</segment>
-</net>
-<net name="N$3" class="0">
-<segment>
-<pinref part="IC1" gate="G$1" pin="I2"/>
-<pinref part="IC2" gate="G$1" pin="GP1"/>
-<wire x1="157.48" y1="91.44" x2="152.4" y2="91.44" width="0.1524" layer="91"/>
-</segment>
-</net>
-<net name="N$4" class="0">
-<segment>
-<pinref part="IC2" gate="G$1" pin="GP2"/>
-<pinref part="IC1" gate="G$1" pin="I3"/>
-<wire x1="152.4" y1="88.9" x2="157.48" y2="88.9" width="0.1524" layer="91"/>
-</segment>
-</net>
-<net name="N$5" class="0">
-<segment>
-<pinref part="IC1" gate="G$1" pin="I4"/>
-<pinref part="IC2" gate="G$1" pin="GP3"/>
-<wire x1="157.48" y1="86.36" x2="152.4" y2="86.36" width="0.1524" layer="91"/>
-</segment>
-</net>
-<net name="N$6" class="0">
-<segment>
-<pinref part="IC2" gate="G$1" pin="GP4"/>
-<pinref part="IC1" gate="G$1" pin="I5"/>
-<wire x1="152.4" y1="83.82" x2="157.48" y2="83.82" width="0.1524" layer="91"/>
-</segment>
-</net>
-<net name="N$7" class="0">
-<segment>
-<pinref part="IC1" gate="G$1" pin="I6"/>
-<pinref part="IC2" gate="G$1" pin="GP5"/>
-<wire x1="157.48" y1="81.28" x2="152.4" y2="81.28" width="0.1524" layer="91"/>
-</segment>
-</net>
-<net name="N$8" class="0">
-<segment>
-<pinref part="IC2" gate="G$1" pin="GP6"/>
-<pinref part="IC1" gate="G$1" pin="I7"/>
-<wire x1="152.4" y1="78.74" x2="157.48" y2="78.74" width="0.1524" layer="91"/>
-</segment>
-</net>
-<net name="N$9" class="0">
-<segment>
-<pinref part="IC1" gate="G$1" pin="I8"/>
-<pinref part="IC2" gate="G$1" pin="GP7"/>
-<wire x1="157.48" y1="76.2" x2="152.4" y2="76.2" width="0.1524" layer="91"/>
+<wire x1="76.2" y1="170.18" x2="60.96" y2="170.18" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="SSTX-_USB_OUT" class="0">
@@ -10831,8 +10807,8 @@ Source: &lt;a href="https://content.kemet.com/datasheets/KEM_R7002_EC2_EE2.pdf"&
 <net name="USBPWR_CONNECT_COIL" class="0">
 <segment>
 <pinref part="IC1" gate="G$1" pin="O1"/>
-<wire x1="182.88" y1="93.98" x2="215.9" y2="93.98" width="0.1524" layer="91"/>
-<label x="187.96" y="93.98" size="1.778" layer="95"/>
+<wire x1="167.64" y1="109.22" x2="167.64" y2="142.24" width="0.1524" layer="91"/>
+<label x="167.64" y="114.3" size="1.778" layer="95" rot="R90"/>
 </segment>
 <segment>
 <pinref part="K1" gate="G$1" pin="COIL_-_2"/>
@@ -10843,8 +10819,8 @@ Source: &lt;a href="https://content.kemet.com/datasheets/KEM_R7002_EC2_EE2.pdf"&
 <net name="USBPWR_DISCONNECT_COIL" class="0">
 <segment>
 <pinref part="IC1" gate="G$1" pin="O2"/>
-<wire x1="182.88" y1="91.44" x2="215.9" y2="91.44" width="0.1524" layer="91"/>
-<label x="187.96" y="91.44" size="1.778" layer="95"/>
+<wire x1="170.18" y1="109.22" x2="170.18" y2="142.24" width="0.1524" layer="91"/>
+<label x="170.18" y="114.3" size="1.778" layer="95" rot="R90"/>
 </segment>
 <segment>
 <pinref part="K1" gate="G$1" pin="COIL_-_1"/>
@@ -10855,8 +10831,8 @@ Source: &lt;a href="https://content.kemet.com/datasheets/KEM_R7002_EC2_EE2.pdf"&
 <net name="USBDATA_CONNECT_COIL" class="0">
 <segment>
 <pinref part="IC1" gate="G$1" pin="O3"/>
-<wire x1="182.88" y1="88.9" x2="215.9" y2="88.9" width="0.1524" layer="91"/>
-<label x="187.96" y="88.9" size="1.778" layer="95"/>
+<wire x1="172.72" y1="109.22" x2="172.72" y2="142.24" width="0.1524" layer="91"/>
+<label x="172.72" y="114.3" size="1.778" layer="95" rot="R90"/>
 </segment>
 <segment>
 <pinref part="K2" gate="G$1" pin="COIL_-_2"/>
@@ -10867,8 +10843,8 @@ Source: &lt;a href="https://content.kemet.com/datasheets/KEM_R7002_EC2_EE2.pdf"&
 <net name="USBDATA_DISCONNECT_COIL" class="0">
 <segment>
 <pinref part="IC1" gate="G$1" pin="O4"/>
-<wire x1="182.88" y1="86.36" x2="215.9" y2="86.36" width="0.1524" layer="91"/>
-<label x="187.96" y="86.36" size="1.778" layer="95"/>
+<wire x1="175.26" y1="109.22" x2="175.26" y2="142.24" width="0.1524" layer="91"/>
+<label x="175.26" y="114.3" size="1.778" layer="95" rot="R90"/>
 </segment>
 <segment>
 <pinref part="K2" gate="G$1" pin="COIL_-_1"/>
@@ -10879,8 +10855,8 @@ Source: &lt;a href="https://content.kemet.com/datasheets/KEM_R7002_EC2_EE2.pdf"&
 <net name="USBSSRX_CONNECT_COIL" class="0">
 <segment>
 <pinref part="IC1" gate="G$1" pin="O5"/>
-<wire x1="182.88" y1="83.82" x2="215.9" y2="83.82" width="0.1524" layer="91"/>
-<label x="187.96" y="83.82" size="1.778" layer="95"/>
+<wire x1="177.8" y1="109.22" x2="177.8" y2="142.24" width="0.1524" layer="91"/>
+<label x="177.8" y="114.3" size="1.778" layer="95" rot="R90"/>
 </segment>
 <segment>
 <pinref part="K3" gate="G$1" pin="COIL_-_2"/>
@@ -10891,8 +10867,8 @@ Source: &lt;a href="https://content.kemet.com/datasheets/KEM_R7002_EC2_EE2.pdf"&
 <net name="USBSSRX_DISCONNECT_COIL" class="0">
 <segment>
 <pinref part="IC1" gate="G$1" pin="O6"/>
-<wire x1="182.88" y1="81.28" x2="215.9" y2="81.28" width="0.1524" layer="91"/>
-<label x="187.96" y="81.28" size="1.778" layer="95"/>
+<wire x1="180.34" y1="109.22" x2="180.34" y2="142.24" width="0.1524" layer="91"/>
+<label x="180.34" y="114.3" size="1.778" layer="95" rot="R90"/>
 </segment>
 <segment>
 <pinref part="K3" gate="G$1" pin="COIL_-_1"/>
@@ -10903,8 +10879,8 @@ Source: &lt;a href="https://content.kemet.com/datasheets/KEM_R7002_EC2_EE2.pdf"&
 <net name="USBSSTX_CONNECT_COIL" class="0">
 <segment>
 <pinref part="IC1" gate="G$1" pin="O7"/>
-<wire x1="182.88" y1="78.74" x2="215.9" y2="78.74" width="0.1524" layer="91"/>
-<label x="187.96" y="78.74" size="1.778" layer="95"/>
+<wire x1="182.88" y1="109.22" x2="182.88" y2="142.24" width="0.1524" layer="91"/>
+<label x="182.88" y="114.3" size="1.778" layer="95" rot="R90"/>
 </segment>
 <segment>
 <pinref part="K4" gate="G$1" pin="COIL_-_2"/>
@@ -10915,13 +10891,85 @@ Source: &lt;a href="https://content.kemet.com/datasheets/KEM_R7002_EC2_EE2.pdf"&
 <net name="USBSSTX_DISCONNECT_COIL" class="0">
 <segment>
 <pinref part="IC1" gate="G$1" pin="O8"/>
-<wire x1="182.88" y1="76.2" x2="215.9" y2="76.2" width="0.1524" layer="91"/>
-<label x="187.96" y="76.2" size="1.778" layer="95"/>
+<wire x1="185.42" y1="109.22" x2="185.42" y2="142.24" width="0.1524" layer="91"/>
+<label x="185.42" y="114.3" size="1.778" layer="95" rot="R90"/>
 </segment>
 <segment>
 <pinref part="K4" gate="G$1" pin="COIL_-_1"/>
 <wire x1="88.9" y1="7.62" x2="68.58" y2="7.62" width="0.1524" layer="91"/>
 <label x="71.12" y="7.62" size="1.778" layer="95"/>
+</segment>
+</net>
+<net name="N$2" class="0">
+<segment>
+<pinref part="IC1" gate="G$1" pin="I8"/>
+<wire x1="185.42" y1="83.82" x2="185.42" y2="76.2" width="0.1524" layer="91"/>
+<wire x1="185.42" y1="76.2" x2="157.48" y2="76.2" width="0.1524" layer="91"/>
+<pinref part="IC2" gate="G$1" pin="GP0"/>
+</segment>
+</net>
+<net name="N$3" class="0">
+<segment>
+<pinref part="IC1" gate="G$1" pin="I7"/>
+<wire x1="182.88" y1="83.82" x2="182.88" y2="73.66" width="0.1524" layer="91"/>
+<wire x1="182.88" y1="73.66" x2="157.48" y2="73.66" width="0.1524" layer="91"/>
+<pinref part="IC2" gate="G$1" pin="GP1"/>
+</segment>
+</net>
+<net name="N$4" class="0">
+<segment>
+<pinref part="IC1" gate="G$1" pin="I6"/>
+<wire x1="180.34" y1="83.82" x2="180.34" y2="71.12" width="0.1524" layer="91"/>
+<wire x1="180.34" y1="71.12" x2="157.48" y2="71.12" width="0.1524" layer="91"/>
+<pinref part="IC2" gate="G$1" pin="GP2"/>
+</segment>
+</net>
+<net name="N$5" class="0">
+<segment>
+<pinref part="IC1" gate="G$1" pin="I5"/>
+<wire x1="177.8" y1="83.82" x2="177.8" y2="68.58" width="0.1524" layer="91"/>
+<wire x1="177.8" y1="68.58" x2="157.48" y2="68.58" width="0.1524" layer="91"/>
+<pinref part="IC2" gate="G$1" pin="GP3"/>
+</segment>
+</net>
+<net name="N$6" class="0">
+<segment>
+<pinref part="IC1" gate="G$1" pin="I4"/>
+<wire x1="175.26" y1="83.82" x2="175.26" y2="66.04" width="0.1524" layer="91"/>
+<wire x1="175.26" y1="66.04" x2="157.48" y2="66.04" width="0.1524" layer="91"/>
+<pinref part="IC2" gate="G$1" pin="GP4"/>
+</segment>
+</net>
+<net name="N$7" class="0">
+<segment>
+<pinref part="IC1" gate="G$1" pin="I3"/>
+<wire x1="172.72" y1="83.82" x2="172.72" y2="63.5" width="0.1524" layer="91"/>
+<wire x1="172.72" y1="63.5" x2="157.48" y2="63.5" width="0.1524" layer="91"/>
+<pinref part="IC2" gate="G$1" pin="GP5"/>
+</segment>
+</net>
+<net name="N$8" class="0">
+<segment>
+<pinref part="IC1" gate="G$1" pin="I2"/>
+<wire x1="170.18" y1="83.82" x2="170.18" y2="60.96" width="0.1524" layer="91"/>
+<wire x1="170.18" y1="60.96" x2="157.48" y2="60.96" width="0.1524" layer="91"/>
+<pinref part="IC2" gate="G$1" pin="GP6"/>
+</segment>
+</net>
+<net name="N$9" class="0">
+<segment>
+<pinref part="IC1" gate="G$1" pin="I1"/>
+<wire x1="167.64" y1="83.82" x2="167.64" y2="58.42" width="0.1524" layer="91"/>
+<wire x1="167.64" y1="58.42" x2="157.48" y2="58.42" width="0.1524" layer="91"/>
+<pinref part="IC2" gate="G$1" pin="GP7"/>
+</segment>
+</net>
+<net name="N$10" class="0">
+<segment>
+<pinref part="R3" gate="G$1" pin="1"/>
+<wire x1="124.46" y1="78.74" x2="124.46" y2="76.2" width="0.1524" layer="91"/>
+<wire x1="124.46" y1="76.2" x2="127" y2="76.2" width="0.1524" layer="91"/>
+<pinref part="IC2" gate="G$1" pin="/RST"/>
 </segment>
 </net>
 </nets>
