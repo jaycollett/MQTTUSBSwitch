@@ -18,6 +18,7 @@
 #include <ESP8266WebServer.h>
 #include <WiFiManager.h>          //https://github.com/tzapu/WiFiManager
 #include <PubSubClient.h>         //https://github.com/knolleary/pubsubclient
+#include <ArduinoJson.h>          //https://arduinojson.org/
 
 #define DEBUG
 
@@ -31,15 +32,13 @@
 #endif
 
 const char    fmversion[]     = "v1.4";                         // firmware version
-const char    mqtt_server[]   = "xxxxxxxxxx.xxx";               // server name for mqtt
-const char    mqtt_username[] = "xxxxxxxxxxxxxxxxx";            // username for MQTT broker (USE ONE)
-const char    mqtt_password[] = "xxxxxxxxxxxxxx";               // password for MQTT broker
+const char    mqtt_server[]   = "ha.collett.us";                // server name for mqtt
+const char    mqtt_username[] = "mqtt_user_collett";            // username for MQTT broker (USE ONE)
+const char    mqtt_password[] = "gabriel03ana08";               // password for MQTT broker
 const char    mqtt_clientid[] = "mqttUsbSwitch";                // client id for connections to MQTT broker
-const String  mqtt_out_topic  = "mqttUSBSwitch/stats";          // the full topic for the publishing of data
+const String  mqtt_out_topic  = "mqttUSBSwitch/stats/switch";   // the full topic for the publishing of data
 const String  mqtt_in_topic   = "mqttUSBSwitch/cmd/switch";     // the full topic for the subscription
-const String  fwVersionTopic  = mqtt_out_topic + "/firmware";
-const String  swStatusTopic   = mqtt_out_topic + "/switch";
-const String  actionTopic     = mqtt_out_topic + "/triggerdby";
+const String  mqtt_att_topic  = "mqttUSBSwitch/attributes";     // the full topic for posting attributes for this device
 
 // Connect/Disconnect pins are incorrect in schematic based on the NO/CL position of the relays, adjusting in the firmware
 #define powerConnectPin        12 //GPIO12
@@ -51,8 +50,11 @@ const String  actionTopic     = mqtt_out_topic + "/triggerdby";
 // keep track of our switch status (defaults on boot to off, and we make sure the switch is turned off)
 String switchStatus = "off";
 
-// keep track of what caused us to take action, either MQTT message, manual button push, or device reset
-String lastActionBy = "device_reset";
+// configure a buffer to be used by arduinojson to post device attributes
+char  MQTTMessageBuffer[256];
+
+// configure our json static document with 256 bytes of space (pubsubclient is defaulted to max message of 256 bytes)
+StaticJsonDocument<256> MQTTAttributesJSON;
 
 // init our WiFi client object
 WiFiClient espWiFiClient;
@@ -116,6 +118,12 @@ void setup() {
 
   // start off in a disconnected state and update mqtt server
   disconnectUSB();
+
+  // setup our const firmware version in our MQTT JSON document
+  MQTTAttributesJSON["FirmwareVersion"] = fmversion;
+
+  // keep track of what caused us to take action, either MQTT message, manual button push, or device reset
+  MQTTAttributesJSON["LastActionBy"] = "device_reset";
 }
 
 // ************************************************************************************************
@@ -136,7 +144,7 @@ void loop() {
     if (digitalRead(manualSwitchButtonPin) == LOW) {
       // switch the relays as the user requested
       debugln("Switching...");
-      lastActionBy = "manual_button";
+      MQTTAttributesJSON["LastActionBy"] = "manual_button";
       if (switchStatus.equalsIgnoreCase("on")) {
         debugln("we are on, switching off...");
         // turn off the switch
@@ -185,13 +193,13 @@ void mqttSubscriptionMessage(char* topic, byte* payload, unsigned int length) {
   // Switch on the LED if an 1 was received as first character
   if (payloadString.equalsIgnoreCase("on")) {
     // update our value for the last action by topic
-    lastActionBy = "mqtt_message";
+    MQTTAttributesJSON["LastActionBy"] = "mqtt_message";
     // switch the usb lines to connect everything
     connectUSB();
   }
   else if (payloadString.equalsIgnoreCase("off")) {
     // update our value for the last action by topic
-    lastActionBy = "mqtt_message";
+    MQTTAttributesJSON["LastActionBy"] = "mqtt_message";
     // switch the usb lines to disconnect everything
     disconnectUSB();
   }
@@ -204,9 +212,10 @@ void mqttSubscriptionMessage(char* topic, byte* payload, unsigned int length) {
 // Method to handle publishing MQTT our data to server
 // **************************************************************************
 void publishMQTTData() {
-  client.publish(fwVersionTopic.c_str(), fmversion);
-  client.publish(swStatusTopic.c_str(), switchStatus.c_str());
-  client.publish(actionTopic.c_str(), lastActionBy.c_str());
+  client.publish(mqtt_out_topic.c_str(), switchStatus.c_str());
+  char buffer[256];
+  size_t n = serializeJson(MQTTAttributesJSON, buffer);
+  client.publish(mqtt_att_topic.c_str(), buffer, n);
 }
 
 // **************************************************************************
@@ -254,15 +263,15 @@ void reconnect() {
 void connectUSB() {
   // first we must connect the power and gnd lines
   digitalWrite(powerConnectPin, HIGH);
-  delay(80);
+  delay(50);
   digitalWrite(powerConnectPin, LOW);
 
   // now that the power lines are connected, we wait a fraction of a second
-  delay(80);
+  delay(50);
 
   // now we can disconnect power and gnd
   digitalWrite(dataConnectPin, HIGH);
-  delay(80);
+  delay(50);
   digitalWrite(dataConnectPin, LOW);
 
   // set our onboard LED status to on
@@ -281,7 +290,7 @@ void connectUSB() {
 void disconnectUSB() {
   // first we must remove the data lines
   digitalWrite(dataConnectPin, HIGH);
-  delay(80);
+  delay(50);
   digitalWrite(dataConnectPin, LOW);
 
   // now that the data lines are disconnected, we wait a fraction of a second
@@ -289,7 +298,7 @@ void disconnectUSB() {
 
   // now we can disconnect power and gnd
   digitalWrite(powerDisconnectPin, HIGH);
-  delay(80);
+  delay(50);
   digitalWrite(powerDisconnectPin, LOW);
 
   // update our tracking var
